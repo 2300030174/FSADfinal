@@ -1,0 +1,172 @@
+.community-container {
+    width: 100vw;
+    min-height: 100vh;
+    background: black url("/community.jpg") no-repeat center center/cover;
+    color: limegreen;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    margin-top: 60vh;
+}
+
+/* Rest of your CSS remains unchanged */
+
+  .community-title {
+    font-size: 2.5rem;
+    text-shadow: 0 0 15px rgb(10, 100, 10);
+    margin-bottom: 10vh;
+  }
+  
+  /* Comment Input Box */
+  .comment-box {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    max-width: 600px;
+    background: #0a0a0a;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+  }
+  
+  .comment-box textarea {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    background: black;
+    color: limegreen;
+    border: 1px solid limegreen;
+    border-radius: 5px;
+    resize: none;
+    font-size: 16px;
+  }
+  
+  .comment-box button {
+    margin-top: 10px;
+    background: limegreen;
+    color: black;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .comment-box button:hover {
+    background: darkgreen;
+    box-shadow: 0 0 10px limegreen;
+  }
+  
+  /* Comments Section */
+  .comments-section {
+    width: 60%;
+    max-width: 600px;
+    margin-top: 20px;
+  }
+  
+  .comment {
+    background: #0a0a0a;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+    animation: fadeIn 0.5s ease-in-out;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  /* Hover Effect */
+  .comment:hover {
+    box-shadow: 0 0 15px limegreen;
+    transform: scale(1.02);
+  }
+  
+  /* Reply Button */
+  .reply-btn {
+    background: transparent;
+    border: 1px solid limegreen;
+    color: limegreen;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .reply-btn:hover {
+    background: limegreen;
+    color: black;
+    box-shadow: 0 0 10px limegreen;
+  }
+  
+  /* Reply Box */
+  .reply-box {
+    margin-top: 10px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .reply-box textarea {
+    width: 100%;
+    height: 50px;
+    padding: 8px;
+    background: black;
+    color: limegreen;
+    border: 1px solid limegreen;
+    border-radius: 5px;
+    resize: none;
+  }
+  
+  .reply-box button {
+    margin-top: 5px;
+    background: limegreen;
+    color: black;
+    padding: 6px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .reply-box button:hover {
+    background: darkgreen;
+    box-shadow: 0 0 10px limegreen;
+  }
+  
+  /* Replies */
+  .replies {
+    margin-left: 20px;
+    border-left: 2px solid limegreen;
+    padding-left: 10px;
+  }
+  
+  .reply {
+    background: #111;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.3);
+    margin: 5px 0;
+  }
+  
+  .reply h5 {
+    color: limegreen;
+    margin: 0;
+  }
+  
+  .reply p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  
+  /* Fade-in Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

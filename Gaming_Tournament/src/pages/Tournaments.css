@@ -1,0 +1,97 @@
+/* Ensure the page content starts below the header */
+.tournaments-page {
+  padding-top: 150px;
+  text-align: center;
+}
+
+/* Tournaments Heading */
+.tournaments-heading {
+  font-size: 2rem;
+  color: #00ffea;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(0, 255, 234, 0.8);
+}
+
+/* Tournament Controls (Search & Filter Section) */
+.tournament-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+.search-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.search-icon {
+  font-size: 1.8rem;
+  color: #00ffea;
+  transition: transform 0.2s ease-in-out;
+}
+
+.search-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Search Bar Container (Now pushes content down when active) */
+.search-bar-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 10; /* Ensures it stays above the content */
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 20px; /* Adds spacing when search is active */
+}
+
+/* Ensure search bar doesn't hide text but keeps the neon theme */
+.search-bar {
+  width: 45%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8); /* Slight transparency */
+  color: #00ffea;
+  box-shadow: 0 0 15px rgba(0, 255, 234, 0.5);
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-bar::placeholder {
+  color: rgba(0, 255, 234, 0.7);
+}
+
+/* Ensure live grid moves down when search bar is open */
+.search-active {
+  margin-top: 60px;
+}
+
+/* Filter Section */
+.filter-section {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.filter-dropdown {
+  padding: 10px;
+  border: 1px solid #00ffea;
+  border-radius: 5px;
+  background: black;
+  color: #00ffea;
+  outline: none;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 255, 234, 0.5);
+}

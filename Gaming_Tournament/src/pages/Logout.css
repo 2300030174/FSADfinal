@@ -1,0 +1,43 @@
+/* src/pages/Logout.css */
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    background-size: 400% 400%;
+    animation: pulseBg 10s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+  }
+  
+  @keyframes pulseBg {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  h1 {
+    font-size: 4rem;
+    margin: 0;
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
+  }
+  
+  p {
+    font-size: 1.8rem;
+    color: #ff00ff;
+    text-shadow: 0 0 8px #ff00ff;
+    margin-top: 1rem;
+  }
+  

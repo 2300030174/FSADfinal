@@ -1,0 +1,262 @@
+/* Full-screen container */
+.latest-news-container {
+    margin-top: 80px; /* Adjust based on header height */
+    height: calc(100vh - 80px); /* Ensures it fits within the remaining viewport */
+    width: 100vw;
+    background-image: url('/esports_news.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: limegreen;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    margin-top: 12vh;
+    padding-top: 5vh;
+}
+
+.latest-news-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px limegreen;
+    margin-bottom: 20px; /* Add spacing below heading */
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.carousel-slide {
+    width: 500px;  /* Fixed width */
+    height: 300px; /* Fixed height */
+    background: #0a0a0a;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 255, 0, 0.5);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.carousel-slide:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 255, 0, 0.7);
+}
+
+.carousel-button {
+    background: limegreen;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin: 0 10px;
+    font-size: 24px;
+    border-radius: 5px;
+}
+
+.carousel-button:hover {
+    background: darkgreen;
+}
+
+/* Title */
+.news-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 15px limegreen;
+}
+
+/* Carousel */
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+}
+
+/* News Slide */
+.news-slide {
+    background: #0a0a0a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 255, 0, 0.3);
+    text-align: center;
+    transition: transform 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Hover Effect */
+.news-slide:hover {
+    box-shadow: 0 10px 20px rgba(0, 255, 0, 0.5);
+    transform: scale(1.05);
+}
+
+/* News Image */
+.news-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Image Hover Effect */
+.news-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.6);
+}
+
+/* News Content */
+.news-content {
+    padding: 10px;
+}
+
+/* Heading */
+.news-heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Date */
+.news-date {
+    font-size: 1rem;
+    color: lightgray;
+}
+
+/* Description */
+.news-description {
+    white-space: normal !important; /* Allows multi-line text */
+    overflow: visible !important;
+    text-overflow: unset !important;
+}
+
+/* Navigation Buttons */
+.prev-btn, .next-btn {
+    background: rgba(0, 255, 0, 0.3);
+    color: limegreen;
+    font-size: 2rem;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.3s;
+}
+
+/* Positioning Buttons */
+.prev-btn {
+    left: -50px;
+}
+
+.next-btn {
+    right: -50px;
+}
+
+/* Button Hover Effect */
+.prev-btn:hover, .next-btn:hover {
+    background: limegreen;
+    color: black;
+    box-shadow: 0 0 15px limegreen;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures full image is visible */
+    border-radius: 10px;
+}
+
+/* Modal Styles */
+.news-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content {
+    background: black;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    color: limegreen;
+    box-shadow: 0 4px 10px rgba(0, 255, 0, 0.5);
+    width: 50%;
+    max-width: 600px;
+    max-height: 80vh; /* Prevents shrinking */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Prevents full modal scrolling */
+}
+
+
+/* Ensure modal image fits properly */
+.modal-image {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/* Ensure description box scrolls properly */
+.news-description-scrollable {
+    max-height: 250px; /* Allows scrolling for long text */
+    overflow-y: auto; /* Enables vertical scrolling */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #0a0a0a;
+    color: white;
+    text-align: left;
+    white-space: normal; /* Prevents single-line truncation */
+    word-wrap: break-word; /* Ensures text wraps properly */
+}
+
+
+/* Read More Button */
+.read-more {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: limegreen;
+    font-weight: bold;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.close-btn:hover {
+    background: darkred;
+}

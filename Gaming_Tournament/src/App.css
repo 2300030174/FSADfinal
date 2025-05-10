@@ -1,0 +1,311 @@
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1a;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.account-dropdown,
+.search-bar {
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-icon {
+  cursor: pointer;
+  font-size: 24px;
+  margin-left: 20px;
+}
+
+.search-bar {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background-color: #444;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.search-bar input {
+  width: 200px;
+  padding: 5px;
+  background-color: #555;
+  border: none;
+  color: #fff;
+}
+
+.categories {
+  margin-top: 10px;
+}
+
+.categories span {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.account {
+  position: relative;
+  cursor: pointer;
+}
+
+.account-dropdown {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background-color: #444;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.account-dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.account-dropdown li {
+  padding: 5px 0;
+  cursor: pointer;
+}
+
+.homee {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/public/chamber.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.homee h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(90deg, #ff0026, #be0211, #5f0101);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 2px rgb(252, 238, 79), 0 0 4px rgb(252, 238, 79);
+  animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 2px rgb(252, 220, 79), 0 0 4px rgb(252, 220, 79);
+  }
+  to {
+    text-shadow: 0 0 4px rgb(252, 220, 79), 0 0 6px rgb(252, 220, 79);
+  }
+}
+
+.homee p {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  backdrop-filter: blur(5px);
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.explore-btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: linear-gradient(90deg, #ffc800, #e2b202, #eba103);
+  color: white;
+  text-shadow: 0 0 5px rgba(0, 255, 204, 0.8);
+  transition: background 0.3s, transform 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.explore-btn:hover {
+  transform: scale(1.05);
+}
+
+.cards-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow-y: auto;
+  padding: 20px;
+  background-color: #121212;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInAnimation 0.5s ease-in forwards;
+}
+
+@keyframes fadeInAnimation {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+.card {
+  background: #1e1e1e;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  position: relative;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00ffcc;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-content h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #00ffcc;
+}
+
+.card-arrive {
+  opacity: 0;
+  animation: cardAppear 0.4s ease-in forwards;
+}
+
+@keyframes cardAppear {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.expanded-card {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.expanded-card video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.expanded-card-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #fff;
+  max-width: 600px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+}
+
+.expanded-card-content.scrolled {
+  transform: translateY(-100%);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.expanded-card-content h2 {
+  font-size: 2rem;
+  color: #00ffcc;
+}
+
+.expanded-card-content p {
+  font-size: 1.2rem;
+}
+
+.expanded-card-content button {
+  background-color: transparent;
+  border: 2px solid #00ffcc;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 10px;
+  color: #00ffcc;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+}
+
+.expanded-card-content button:hover {
+  background: #00ffcc;
+  color: black;
+}
+
+body, html {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}

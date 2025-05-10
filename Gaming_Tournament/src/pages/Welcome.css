@@ -1,0 +1,26 @@
+/* Welcome.css */
+.welcome {
+    text-align: center;
+    padding: 50px;
+  }
+  
+  .welcome h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #00ff99;
+  }
+  
+  .explore-btn {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .explore-btn:hover {
+    background-color: #0056b3;
+  }

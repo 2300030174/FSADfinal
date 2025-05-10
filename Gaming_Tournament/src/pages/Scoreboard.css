@@ -1,0 +1,95 @@
+/* Scoreboard Container */
+.scoreboard-container {
+    background: url('./public/omen.jpg') no-repeat center top fixed;
+    background-size: cover;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+  }
+  
+  /* Title */
+  .scoreboard-title {
+    font-size: 2.5rem;
+    color: #00ff99;
+    text-shadow: 0 0 10px limegreen;
+    margin-bottom: 20px;
+  }
+  
+  /* Dropdown */
+  .game-selector {
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    background: black;
+    color: limegreen;
+    border: 2px solid limegreen;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .game-selector:hover {
+    background: limegreen;
+    color: black;
+  }
+  
+  /* Leaderboard */
+  .leaderboard {
+    width: 50%;
+    max-width: 600px;
+    margin-top: 20px;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 255, 0, 0.5);
+  }
+  
+  /* Individual Row */
+  .leaderboard-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    background: rgba(0, 255, 0, 0.15);
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Animation */
+  .animate-row {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      transform: translateY(-10px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Text Styling */
+  .rank {
+    font-size: 1.5rem;
+    color: gold;
+    font-weight: bold;
+  }
+  
+  .player {
+    font-size: 1.3rem;
+    color: white;
+  }
+  
+  .score {
+    font-size: 1.2rem;
+    color: #00ff99;
+  }
+  

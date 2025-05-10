@@ -1,0 +1,86 @@
+.gaming-gear-container {
+    padding: 20px;
+    background: black;
+    margin-top: 60vh; /* Adjusts dynamically based on screen size */
+    position: relative;
+  }
+  
+  
+  .gear-card {
+    background: #0a0a0a;
+    color: limegreen;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 255, 0, 0.2);
+    margin: 5%;
+    min-height: 300px; /* Adjust as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Keeps spacing uniform */
+  }
+  
+
+  .gear-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 320px; /* Ensures all cards stay uniform */
+}
+
+.gear-content {
+    flex-grow: 1; /* Pushes content up and aligns button properly */
+    text-align: center;
+}
+
+.buy-btn {
+    width: 100%;
+    margin-top: auto; /* Pushes the button to the bottom */
+}
+
+
+
+  .gear-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 255, 0, 0.5);
+    transform: scale(1.05);
+  }
+  
+  .gear-img {
+    width: 100%;
+    height: auto; /* Allows images to scale naturally */
+    max-height: 200px; /* Optional limit */
+}
+
+  
+  .gear-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .gear-price {
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+  
+  .buy-btn {
+    width: 100%;
+    margin-top: 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  
+  .buy-btn:hover {
+    background-color: darkblue;
+  }
+  

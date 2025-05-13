@@ -6,7 +6,7 @@ import Cards from "./components/Cards.jsx";
 import Tournaments from "./pages/Tournaments.jsx";
 import GamingGear from "./pages/GamingGear.jsx";
 import LatestNews from "./pages/LatestNews.jsx";
-import Scoreboard from "./pages/ScoreBoard.jsx";
+import ScoreBoard from "./pages/Scoreboard.jsx"; // lowercase 'b'
 import Live from "./pages/Live.jsx";
 import Community from "./pages/Community.jsx";
 import Home from "./pages/Home.jsx";
@@ -55,6 +55,8 @@ export default function App() {
               <ProtectedRoute>
                 <Home tournaments={tournaments} gearItems={gearItems} />
               </ProtectedRoute>
+                
+
             }
           />
           <Route
@@ -79,6 +81,7 @@ export default function App() {
               <ProtectedRoute>
                 <LatestNews />
               </ProtectedRoute>
+                
             }
           />
           <Route
